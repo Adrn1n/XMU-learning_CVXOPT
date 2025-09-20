@@ -80,7 +80,7 @@
 
             \fill[green!50,opacity=0.5] (0,0) -- (20,0) -- (10,50) -- (0,60) -- cycle;
 
-            \draw[thick,orange] (25,0) -- (0,250/3)node[left]{$250 x + 75 y = 6250$};
+            \draw[thick,orange] (25,0) -- (0,250/3)node[right]{$f = 250 x + 75 y = 6250$};
         \end{tikzpicture}
     \end{minipage}
     \hfill
@@ -95,6 +95,29 @@
 
 \subsection*{(b)}
 \addcontentsline{toc}{subsection}{(b)}
+\begin{center}
+    \begin{minipage}{0.525\textwidth}
+        \begin{tikzpicture}[scale=0.04]
+            \draw[->] (0,0) -- (75,0)node[right]{$x$};
+            \draw[->] (0,0) -- (0,150)node[above]{$y$};
+
+            \draw[thick,red] (50,0)node[below]{$x + y = 50$} -- (0,50);
+            \draw[thick,blue] (30,0) -- (0,90)node[left]{$3 x + y = 90$};
+
+            \fill[green!50,opacity=0.5] (0,0) -- (30,0) -- (20,30) -- (0,50) -- cycle;
+
+            \draw[thick,orange] (30,0) -- (0,120)node[left]{$f = 4 x + y = 120$};
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.425\textwidth}
+        \begin{align*}
+            x = 30, \ y & = 0,              \\
+            \max{f}     & = 4 \times 30 + 0 \\
+                        & = 120             \\
+        \end{align*}
+    \end{minipage}
+\end{center}
 
 \section*{3}
 \addcontentsline{toc}{section}{3}
