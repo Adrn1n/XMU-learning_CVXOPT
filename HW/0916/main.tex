@@ -125,13 +125,25 @@
     \text{minimize} & \quad f = 5 x + 7 y \\
     \text{s.t.}     & \quad
     \begin{cases}
-        2 x + y \geq 8  \\
-        x + 2 y \geq 10 \\
-        x, y \geq 0     \\
+        2 x + y & \geq 8  \\
+        x + 2 y & \geq 10 \\
+        x, y    & \geq 0  \\
     \end{cases}
 \end{align*}
 
 \section*{4}
 \addcontentsline{toc}{section}{4}
+\begin{align*}
+    \text{minimize} & \quad f = (16, 10, 15, 10, 12, 10) (x_{P, A}, x_{P, B}, x_{P, C}, x_{Q, A}, x_{Q, B}, x_{Q, C})^T \\
+    \text{s.t.}     & \quad
+    \begin{cases}
+        x_{P,A} + x_{Q,A}                                    & \geq 5 \\
+        x_{P,B} + x_{Q,B}                                    & \geq 5 \\
+        x_{P,C} + x_{Q,C}                                    & \geq 4 \\
+        x_{P,A} + x_{P,B} + x_{P,C}                          & \leq 8 \\
+        x_{Q,A} + x_{Q,B} + x_{Q,C}                          & \leq 6 \\
+        x_{P,A}, x_{P,B}, x_{P,C}, x_{Q,A}, x_{Q,B}, x_{Q,C} & \geq 0 \\
+    \end{cases}
+\end{align*}
 
 \end{document}
