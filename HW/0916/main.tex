@@ -9,10 +9,11 @@
 % \usepackage{color}
 % \usepackage{graphicx}
 % \usepackage{float}
-% \usepackage{tikz}
+\usepackage{tikz}
 
 \usepackage{amsmath}
-\usepackage{mathtools}
+\usepackage{amssymb}
+% \usepackage{mathtools}
 % \usepackage{calc}
 
 % \usepackage{listings}
@@ -32,7 +33,7 @@
 
 \title{Assignment-1}
 \author{刘行逸}
-\date{\today}
+\date{20250916}
 
 \hypersetup{
     pdftitle={Assignment-1},
@@ -44,17 +45,59 @@
 
 \section*{1}
 \addcontentsline{toc}{section}{1}
+\begin{align*}
+    \begin{vmatrix}
+        1 \\
+    \end{vmatrix}         & = 1 > 0                                                          \\
+    \begin{vmatrix}
+        1      & \alpha \\
+        \alpha & 4      \\
+    \end{vmatrix}      & = 4 - \alpha^2 > 0, \ \alpha \in (-2, 2)                            \\
+    \begin{vmatrix}
+        1      & \alpha & -1 \\
+        \alpha & 4      & 2  \\
+        -1     & 2      & 4  \\
+    \end{vmatrix} & = 1 \times 4 \times 4 + (-1) \times 2 \alpha + (-1) \times 2 \alpha      \\
+                            & - (-1) \times 4 \times (-1) - 4 \alpha^2 - 1 \times 2 \times 2 \\
+                            & = -4 \alpha^2 - 4 \alpha + 8                                   \\
+                            & = -4 (\alpha^2 + \alpha -2) > 0, \ \alpha \in (-2, 1)          \\
+    \\
+    \therefore \alpha       & \in (-2, 1)                                                    \\
+\end{align*}
 
 \section*{2}
 \addcontentsline{toc}{section}{2}
-
-\section*{3}
-\addcontentsline{toc}{section}{3}
 \subsection*{(a)}
 \addcontentsline{toc}{subsection}{(a)}
+\begin{center}
+    \begin{minipage}{0.525\textwidth}
+        \begin{tikzpicture}[scale=0.04]
+            \draw[->] (0,0) -- (75,0)node[right]{$x$};
+            \draw[->] (0,0) -- (0,125)node[above]{$y$};
+
+            \draw[thick,red] (20,0)node[below]{$5 x + y = 100$} -- (0,100);
+            \draw[thick,blue] (60,0) -- (0,60)node[left]{$x + y = 60$};
+
+            \fill[green!50,opacity=0.5] (0,0) -- (20,0) -- (10,50) -- (0,60) -- cycle;
+
+            \draw[thick,orange] (25,0) -- (0,250/3)node[left]{$250 x + 75 y = 6250$};
+        \end{tikzpicture}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.425\textwidth}
+        \begin{align*}
+            x = 10, \ y & = 50,                          \\
+            \max{f}     & = 250 \times 10 + 75 \times 50 \\
+                        & = 6250                         \\
+        \end{align*}
+    \end{minipage}
+\end{center}
 
 \subsection*{(b)}
 \addcontentsline{toc}{subsection}{(b)}
+
+\section*{3}
+\addcontentsline{toc}{section}{3}
 
 \section*{4}
 \addcontentsline{toc}{section}{4}
