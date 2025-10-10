@@ -6,8 +6,10 @@
 \usepackage[english]{babel}
 \usepackage{hyperref}
 
+\usepackage{float}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{tabularx}
 
 \setCJKmainfont[Path="../Assets/Fonts/SourceHan/Serif/",BoldFont={SourceHanSerifSC-Bold.otf},AutoFakeSlant=0.25]{SourceHanSerifSC-Regular.otf}
 \setCJKsansfont[Path="../Assets/Fonts/SourceHan/Sans/",BoldFont={SourceHanSansSC-Bold.otf},AutoFakeSlant=0.25]{SourceHanSansSC-Regular.otf}
@@ -28,7 +30,7 @@
 
 \section*{1}
 \addcontentsline{toc}{section}{1}
-\begin{table}[h]
+\begin{table}[H]
     \scriptsize
     \begin{tabular}{cc|cccccc|c}
             &       & $z$ & $x$  & $y$  & $s_1$ & $s_2$ & $s_3$ &      \\
@@ -41,7 +43,7 @@
     \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
     \scriptsize
     \begin{tabular}{cc|cccccc|c}
             &       & $z$ & $x$ & $y$                                      & $s_1$ & $s_2$ & $s_3$                                     &                                   \\
@@ -54,7 +56,7 @@
     \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
     \scriptsize
     \begin{tabular}{cc|cccccc|c}
             &       & $z$ & $x$ & $y$           & $s_1$                 & $s_2$ & $s_3$                                        &                        \\
@@ -67,7 +69,7 @@
     \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[H]
     \scriptsize
     \begin{tabular}{cc|cccccc|c}
          &       & $z$ & $x$ & $y$           & $s_1$                                        & $s_2$                                     & $s_3$                          &                                   \\
@@ -81,13 +83,70 @@
 \end{table}
 
 \begin{align*}
-    \begin{pmatrix}0 & \frac{1}{3} & 0\\0 & 0 &4\\3 & 0 & 0\end{pmatrix} \begin{pmatrix}x\\y\\s_3\end{pmatrix} & = \begin{pmatrix}4\\12\\9\end{pmatrix} \\
-    \begin{pmatrix}x\\y\\s_3\end{pmatrix}                                                                      & = \begin{pmatrix}3\\12\\3\end{pmatrix} \\
-    \therefore \quad x = 3, \ y = 12,                                                                          & \ \max{(3 x + 2 y)} = 33               \\
+    \begin{pmatrix}0 & \frac{1}{3} & 0 \\ 0 & 0 & 4 \\ 3 & 0 & 0\end{pmatrix} \begin{pmatrix}x \\ y \\ s_3\end{pmatrix} & = \begin{pmatrix}4 \\ 12 \\ 9\end{pmatrix} \\
+    \begin{pmatrix}x \\y \\ s_3\end{pmatrix}                                                                            & = \begin{pmatrix}3 \\ 12 \\ 3\end{pmatrix} \\
+    \therefore \quad x = 3, \ y = 12,                                                                                   & \ \max{(3 x + 2 y)} = 33                   \\
 \end{align*}
 
 \section*{2}
 \addcontentsline{toc}{section}{2}
+\begin{table}[H]
+    \tiny
+    \begin{tabularx}{\textwidth}{cc|ccccccc|c}
+            &       & $z$ & $x_1$ & $x_2$ & $x_3$ & $s_1$ & $s_2$ & $s_3$ &      \\
+        \hline
+            &       & $1$ & $1$   & $-3$  & $-1$  & $0$   & $0$   & $0$   & $0$  \\
+        \hline
+            & $s_1$ & $0$ & $3$   & $-1$  & $2$   & $1$   & $0$   & $0$   & $7$  \\
+        $*$ & $s_2$ & $0$ & $-2$  & $4$   & $0$   & $0$   & $1$   & $0$   & $12$ \\
+            & $s_3$ & $0$ & $-4$  & $3$   & $8$   & $0$   & $0$   & $1$   & $10$ \\
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \tiny
+    \begin{tabularx}{\textwidth}{cc|ccccccc|c}
+            &       & $z$ & $x_1$                                         & $x_2$ & $x_3$ & $s_1$ & $s_2$                                     & $s_3$ &                                  \\
+        \hline
+            &       & $1$ & $1 + (-2) \times \frac{3}{4} = -\frac{1}{2}$  & $0$   & $-1$  & $0$   & $0 + 1 \times \frac{3}{4} = \frac{3}{4}$  & $0$   & $0 + 12 \times \frac{3}{4} = 9$  \\
+        \hline
+            & $s_1$ & $0$ & $3 + (-2) \times \frac{1}{4} = \frac{5}{2}$   & $0$   & $2$   & $1$   & $0 + 1 \times \frac{1}{4} = \frac{1}{4}$  & $0$   & $7 + 12 \times \frac{1}{4} = 10$ \\
+            & $x_2$ & $0$ & $-2$                                          & $4$   & $0$   & $0$   & $1$                                       & $0$   & $12$                             \\
+        $*$ & $s_3$ & $0$ & $-4 - (-2) \times \frac{3}{4} = -\frac{5}{2}$ & $0$   & $8$   & $0$   & $0 - 1 \times \frac{3}{4} = -\frac{3}{4}$ & $1$   & $10 - 12 \times \frac{3}{4} = 1$ \\
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \tiny
+    \begin{tabularx}{\textwidth}{cc|ccccccc|c}
+            &       & $z$ & $x_1$                                                               & $x_2$ & $x_3$ & $s_1$ & $s_2$                                                             & $s_3$                                     &                                            \\
+        \hline
+            &       & $1$ & $-\frac{1}{2} + (-\frac{5}{2}) \times \frac{1}{8} = -\frac{13}{16}$ & $0$   & $0$   & $0$   & $\frac{3}{4} + (-\frac{3}{4}) \times \frac{1}{8} = \frac{21}{32}$ & $0 + 1 \times \frac{1}{8} = \frac{1}{8}$  & $9 + 1 \times \frac{1}{8} = \frac{73}{8}$  \\
+        \hline
+        $*$ & $s_1$ & $0$ & $\frac{5}{2} - (-\frac{5}{2}) \times \frac{1}{4} = \frac{25}{8}$    & $0$   & $0$   & $1$   & $\frac{1}{4} - (-\frac{3}{4}) \times \frac{1}{4} = \frac{7}{16}$  & $0 - 1 \times \frac{1}{4} = -\frac{1}{4}$ & $10 - 1 \times \frac{1}{4} = \frac{39}{4}$ \\
+            & $x_2$ & $0$ & $-2$                                                                & $4$   & $0$   & $0$   & $1$                                                               & $0$                                       & $12$                                       \\
+            & $x_3$ & $0$ & $-\frac{5}{2}$                                                      & $0$   & $8$   & $0$   & $-\frac{3}{4}$                                                    & $1$                                       & $1$                                        \\
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \tiny
+    \begin{tabularx}{\textwidth}{cc|ccccccc|c}
+         &       & $z$ & $x_1$          & $x_2$ & $x_3$ & $s_1$                                        & $s_2$                                                                & $s_3$                                                              &                                                                     \\
+        \hline
+         &       & $1$ & $0$            & $0$   & $0$   & $0 + 1 \times \frac{13}{50} = \frac{13}{50}$ & $\frac{21}{32} + \frac{7}{16} \times \frac{13}{50} = \frac{77}{100}$ & $\frac{1}{8} + (-\frac{1}{4}) \times \frac{13}{50} = \frac{3}{50}$ & $\frac{73}{8} + \frac{39}{4} \times \frac{13}{50} = \frac{583}{50}$ \\
+        \hline
+         & $x_1$ & $0$ & $\frac{25}{8}$ & $0$   & $0$   & $1$                                          & $\frac{7}{16}$                                                       & $-\frac{1}{4}$                                                     & $\frac{39}{4}$                                                      \\
+         & $x_2$ & $0$ & $0$            & $4$   & $0$   & $0 + 1 \times \frac{16}{25} = \frac{16}{25}$ & $1 + \frac{7}{16} \times \frac{16}{25} = \frac{32}{25}$              & $0 + (-\frac{1}{4}) \times \frac{16}{25} = -\frac{4}{25}$          & $12 + \frac{39}{4} \times \frac{16}{25} = \frac{456}{25}$           \\
+         & $x_3$ & $0$ & $0$            & $0$   & $8$   & $0 + 1 \times \frac{4}{5} = \frac{4}{5}$     & $-\frac{3}{4} + \frac{7}{16} \times \frac{4}{5} = -\frac{2}{5}$      & $1 + (-\frac{1}{4}) \times \frac{4}{5} = \frac{4}{5}$              & $1 + \frac{39}{4} \times \frac{4}{5} = \frac{44}{5}$                \\
+    \end{tabularx}
+\end{table}
+
+\begin{align*}
+    \begin{pmatrix}\frac{25}{8} & 0 & 0 \\ 0 & 4 & 0 \\ 0 & 0 & 8\end{pmatrix} \begin{pmatrix}x_1 \\ x_2 \\ x_3\end{pmatrix} & = \begin{pmatrix}\frac{39}{4} \\ \frac{456}{25} \\ \frac{44}{5}\end{pmatrix}   \\
+    \begin{pmatrix}x_1 \\ x_2 \\ x_3\end{pmatrix}                                                                            & = \begin{pmatrix}\frac{78}{25} \\ \frac{144}{25} \\ \frac{11}{10}\end{pmatrix} \\
+    \therefore \quad x_1 = \frac{78}{25}, \ x_2 = \frac{144}{25}, \ x_3 = \frac{11}{10},                                     & \ \max{(-x_1 + 3 x_2 + x_3)} = \frac{583}{50}                                  \\
+\end{align*}
 
 \section*{3}
 \addcontentsline{toc}{section}{3}
