@@ -150,5 +150,49 @@
 
 \section*{3}
 \addcontentsline{toc}{section}{3}
+\begin{table}[H]
+    \tiny
+    \begin{tabularx}{\textwidth}{cc|cccccccc|c}
+            &       & $z$ & $x_1$ & $x_2$ & $x_3$ & $x_4$ & $s_1$ & $s_2$ & $s_3$        \\
+        \hline
+            &       & $1$ & $3$   & $-5$  & $-2$  & $-1$  & $0$   & $0$   & $0$   & $0$  \\
+        \hline
+        $*$ & $s_1$ & $0$ & $1$   & $1$   & $1$   & $0$   & $1$   & $0$   & $0$   & $4$  \\
+            & $s_2$ & $0$ & $4$   & $-1$  & $1$   & $2$   & $0$   & $1$   & $0$   & $12$ \\
+            & $s_3$ & $0$ & $-1$  & $1$   & $2$   & $3$   & $0$   & $0$   & $1$   & $12$ \\
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \tiny
+    \begin{tabularx}{\textwidth}{cc|cccccccc|c}
+            &       & $z$ & $x_1$                & $x_2$ & $x_3$                 & $x_4$ & $s_1$                & $s_2$ & $s_3$                         \\
+        \hline
+            &       & $1$ & $3 + 1 \times 5 = 8$ & $0$   & $-2 + 1 \times 5 = 3$ & $-1$  & $0 + 1 \times 5 = 5$ & $0$   & $0$   & $0 + 4 \times 5 = 20$ \\
+        \hline
+            & $x_2$ & $0$ & $1$                  & $1$   & $1$                   & $0$   & $1$                  & $0$   & $0$   & $4$                   \\
+            & $s_2$ & $0$ & $4 + 1 = 5 $         & $0$   & $1 + 1 = 2$           & $2$   & $0 + 1 = 1$          & $1$   & $0$   & $12 + 4 = 16$         \\
+        $*$ & $s_3$ & $0$ & $-1 - 1 = -2$        & $0$   & $2 - 1 = 1$           & $3$   & $0 - 1 = -1$         & $0$   & $1$   & $12 - 4 = 8$          \\
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \tiny
+    \begin{tabularx}{\textwidth}{cc|cccccccc|c}
+         &       & $z$ & $x_1$                                        & $x_2$ & $x_3$                                     & $x_4$ & $s_1$                                        & $s_2$ & $s_3$                                                                                  \\
+        \hline
+         &       & $1$ & $8 + (-2) \times \frac{1}{3} = \frac{22}{3}$ & $0$   & $3 + 1 \times \frac{1}{3} = \frac{10}{3}$ & $0$   & $5 + (-1) \times \frac{1}{3} = \frac{14}{3}$ & $0$   & $0 + 1 \times \frac{1}{3} = \frac{1}{3}$  & $20 + 8 \times \frac{1}{3} = \frac{68}{3}$ \\
+        \hline
+         & $x_2$ & $0$ & $1$                                          & $1$   & $1$                                       & $0$   & $1$                                          & $0$   & $0$                                       & $4$                                        \\
+         & $s_2$ & $0$ & $5 - (-2) \times \frac{2}{3} = \frac{19}{3}$ & $0$   & $2 - 1 \times \frac{2}{3} = \frac{4}{3}$  & $0$   & $1 - (-1) \times \frac{2}{3} = \frac{5}{3}$  & $1$   & $0 - 1 \times \frac{2}{3} = -\frac{2}{3}$ & $16 - 8 \times \frac{2}{3} = \frac{32}{3}$ \\
+         & $x_4$ & $0$ & $-2$                                         & $0$   & $1$                                       & $3$   & $-1$                                         & $0$   & $1$                                       & $8$                                        \\
+    \end{tabularx}
+\end{table}
+
+\begin{align*}
+    \begin{pmatrix}1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 3 & 0\end{pmatrix} \begin{pmatrix}x_2 \\ x_4 \\ s_2\end{pmatrix} & = \begin{pmatrix}4 \\ \frac{32}{3} \\ 8\end{pmatrix}           \\
+    \begin{pmatrix}x_2 \\ x_4 \\ s_2\end{pmatrix}                                                                 & = \begin{pmatrix}4 \\ \frac{8}{3} \\ \frac{32}{3}\end{pmatrix} \\
+    \therefore \quad x_1 = 0, \ x_2 = 4, \ x_3 = 0, \ x_4 = \frac{8}{3},                                          & \ \max{(-3 x_1 + 5 x_2 + 2 x_3 + x_4)} = \frac{68}{3}          \\
+\end{align*}
 
 \end{document}
