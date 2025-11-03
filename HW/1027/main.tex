@@ -46,12 +46,28 @@
     q_{t,l} = \frac{x a + (2^t - x) b}{2^t} \prec k, \ q_{t,r}     & = \frac{(x + 1) a + (2^t - (x + 1)) b}{2^t} \succ k  \\
     \therefore q_{t,r} - q_{t,l}                                   & = \frac{a - b}{2^t} \succ q_{t,r} - k                \\
     t' > \log_2{\frac{\|a - b\|}{\delta}}, \ \|q_{t', r} - k\|     & < \|q_{t',r} - q_{t',l}\| < \delta                   \\
-    \therefore q_{t', r}                                           & \in \operatorname{U}{(p, \delta)}                    \\
+    \therefore q_{t',r}                                            & \in \operatorname{U}{(p,\delta)}                     \\
     \text{Q.}                                                      & \text{E.D.}                                          \\
 \end{align*}
 
 \section*{2}
 \addcontentsline{toc}{section}{2}
+\begin{align*}
+    i \in \mathbb{N}^*, \ {x_i}' = x_{i'}, \ {\theta_i}'                         & = \theta_{i'}, \ (i + 1)' > i' \ge i, \ \theta_{i'} \ne 0; \ \max{i} = t                                                                         \\
+    \therefore {\theta_i}' > 0, \ \sum_{i = 1}^{t}{{\theta_i}'}                  & = 1,                                                                                                                                             \\
+    \sum_{i = 1}^{k}{\theta_i x_i}                                               & = \sum_{i = 1}^{t}{{\theta_i}' {x_i}'}                                                                                                           \\
+    \because C                                                                   & \text{ is convex}                                                                                                                                \\
+    \therefore t = 2, \ \sum_{i = 1}^{k}{\theta_i x_i}                           & = \sum_{i = 1}^{t}{{\theta_i}' {x_i}'} = \theta_1' x_1' + \theta_2' x_2' \in C                                                                   \\
+    \text{if } t = p \ (p < k), \ \sum_{i = 1}^{t = p}{{\theta_i}' {x_i}'}       & \in C, \tag{2} \label{eq:2}                                                                                                                      \\
+    t = p + 1, \ \sum_{i = 1}^{k}{\theta_i x_i}                                  & = \sum_{i = 1}^{t = p + 1}{{\theta_i}' {x_i}'}                                                                                                   \\
+                                                                                 & = {\theta_{p + 1}}' {x_{p + 1}}' + (\sum_{i = 1}^{p}{{\theta_i}'}) (\sum_{i = 1}^{p}{\frac{{\theta_i}'}{\sum_{i = j}^{p}{{\theta_j}'}} {x_j}'})  \\
+                                                                                 & = {\theta_{p + 1}}' {x_{p + 1}}' + (1 - {\theta_{p + 1}}') x, \ (x = \sum_{i = 1}^{p}{\frac{{\theta_i}'}{\sum_{i = 1}^{p}{{\theta_j}'}} {x_j}'}) \\
+    \because \sum_{i = 1}^{p}{\frac{{\theta_i}'}{\sum_{j = 1}^{p}{{\theta_j}'}}} & = 1; \ \eqref{eq:2}                                                                                                                              \\
+    \therefore x                                                                 & \in C                                                                                                                                            \\
+    \because C                                                                   & \text{ is convex}                                                                                                                                \\
+    \therefore \sum_{i = 1}^{k}{\theta_i x_i}                                    & = {\theta_{p + 1}}' {x_{p + 1}}' + (1 - {\theta_{p + 1}}') x \in C                                                                               \\
+    \text{Q.}                                                                    & \text{E.D.} \ (\text{by induction})                                                                                                              \\
+\end{align*}
 
 \section*{3}
 \addcontentsline{toc}{section}{3}
