@@ -71,5 +71,17 @@
 
 \section*{3}
 \addcontentsline{toc}{section}{3}
+\begin{align*}
+    A = \{X | X \text{ is convex}                                               & \land S \subseteq X\}              \\
+    \because \operatorname{conv}{(S)} \text{ is convex}; \ S                    & \subseteq \operatorname{conv}{(S)} \\
+    \therefore \operatorname{conv}{(S)}                                         & \in A                              \\
+    \therefore \bigcap_{X \in A}{X}                                             & \subseteq \operatorname{conv}{(S)} \\
+    \because \forall X \in A, \ S                                               & \subseteq X                        \\
+    \therefore \forall x, y \in S, \ x, y                                       & \in X                              \\
+    \because X                                                                  & \text{ is convex}                  \\
+    \therefore \forall \theta_1, \theta_2 \in [0, 1], \ \theta_1 x + \theta_2 y & \in \operatorname{conv}{(S)}, X    \\
+    \therefore \operatorname{conv}{(S)}                                         & \subseteq \bigcap_{X \in A}{X}     \\
+    \text{Q.}                                                                   & \text{E.D.}                        \\
+\end{align*}
 
 \end{document}
