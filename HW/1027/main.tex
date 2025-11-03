@@ -7,6 +7,9 @@
 
 \usepackage{hyperref}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+
 \setCJKmainfont[Path="../Assets/Fonts/SourceHan/Serif/",BoldFont={SourceHanSerifSC-Bold.otf},AutoFakeSlant=0.25]{SourceHanSerifSC-Regular.otf}
 \setCJKsansfont[Path="../Assets/Fonts/SourceHan/Sans/",BoldFont={SourceHanSansSC-Bold.otf},AutoFakeSlant=0.25]{SourceHanSansSC-Regular.otf}
 \setCJKmonofont[Path="../Assets/Fonts/SourceHan/Mono/"]{SourceHanMono.ttc}
@@ -26,6 +29,26 @@
 
 \section*{1}
 \addcontentsline{toc}{section}{1}
+\begin{align*}
+    \because C                                                                    & \text{ is midpoint convex}                                            \\
+    \therefore \forall a, b \in C,                                                & \ c = \frac{a + b}{2} \in C                                           \\
+    \therefore d = \frac{a + c}{2} = \frac{3a + b}{4} \in C,                      & \ e = \frac{c + b}{2} = \frac{a + 3b}{4} \in C                        \\
+    \therefore f = \frac{a + d}{2} = \frac{7a + b}{8} \in C,                      & \ g = \frac{d + c}{2} = \frac{5a + 3b}{8} \in C,                      \\
+    h = \frac{c + e}{2} = \frac{3a + 5b}{8} \in C,                                & \ i = \frac{e + b}{2} = \frac{a + 7b}{16} \in C                       \\
+    \therefore A = \{\frac{x a + (2^n - x) b}{2^n} | \forall n, x \in \mathbb{N}, & \ x \le 2^n\} \subset C, \ (\text{by induction}) \tag{1} \label{eq:1} \\
+\end{align*}
+\begin{align*}
+    \text{if } C \text{ is not convex}, \ \exists k \in [0, 1],    & \ p = k a + (1 - k) b \notin C                       \\
+    \because                                                       & \eqref{eq:1}                                         \\
+    \therefore \forall n', x' \in \mathbb{N}, \ x' \le 2^{n'}, \ k & \ne \frac{x'}{2^{n'}}                                \\
+    \because C                                                     & \text{ is closed}                                    \\
+    \therefore \exists \delta \in \mathbb{R}, \ \delta > 0,        & \ \operatorname{U}{(p, \delta)} \cap C = \varnothing \\
+    q_{t,l} = \frac{x a + (2^t - x) b}{2^t} \prec k, \ q_{t,r}     & = \frac{(x + 1) a + (2^t - (x + 1)) b}{2^t} \succ k  \\
+    \therefore q_{t,r} - q_{t,l}                                   & = \frac{a - b}{2^t} \succ q_{t,r} - k                \\
+    t' > \log_2{\frac{\|a - b\|}{\delta}}, \ \|q_{t', r} - k\|     & < \|q_{t',r} - q_{t',l}\| < \delta                   \\
+    \therefore q_{t', r}                                           & \in \operatorname{U}{(p, \delta)}                    \\
+    \text{Q.}                                                      & \text{E.D.}                                          \\
+\end{align*}
 
 \section*{2}
 \addcontentsline{toc}{section}{2}
