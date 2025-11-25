@@ -7,6 +7,9 @@
 
 \usepackage{hyperref}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+
 \setCJKmainfont[Path="../Assets/Fonts/SourceHan/Serif/",BoldFont={SourceHanSerifSC-Bold.otf},AutoFakeSlant=0.25]{SourceHanSerifSC-Regular.otf}
 \setCJKsansfont[Path="../Assets/Fonts/SourceHan/Sans/",BoldFont={SourceHanSansSC-Bold.otf},AutoFakeSlant=0.25]{SourceHanSansSC-Regular.otf}
 \setCJKmonofont[Path="../Assets/Fonts/SourceHan/Mono/"]{SourceHanMono.ttc}
@@ -26,6 +29,14 @@
 
 \section*{1}
 \addcontentsline{toc}{section}{1}
+\begin{align*}
+    f(x)   & = -5 x^2 + 5 x                                 \\
+    f^*(y) & = \sup_{x \in \mathbb{R}}{(y x - f(x))}        \\
+           & = \sup_{x \in \mathbb{R}}{(y x + 5 x^2 - 5 x)} \\
+           & = +\infty, \ (x \to +\infty)                   \\
+\end{align*}
+
+Can't plot.
 
 \section*{2}
 \addcontentsline{toc}{section}{2}
