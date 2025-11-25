@@ -64,5 +64,22 @@ Can't plot.
 
 \section*{4}
 \addcontentsline{toc}{section}{4}
+\begin{align*}
+    \operatorname{dom}{f}               & = (x,y), \ x, y > 0                                             \\
+    \therefore \operatorname{dom}{f}    & \text{ is convex}                                               \\
+    (x \log{x})'                        & = \log{x} + 1 > 0, \ x > 0                                      \\
+    (x \log{x})''                       & = \frac{1}{x} > 0, \ x > 0                                      \\
+    \therefore x \log{x}                & \text{ is convex}                                               \\
+    \forall{(x_1, y_1), (x_2, y_2)}     & \in \operatorname{dom}{f}, k \in [0, 1]                         \\
+    f(k (x_1, y_1) + (1 - k) (x_2,y_2)) & = f(k x_1 + (1 - k) x_2,k y_1 + (1 - k) y_2)                    \\
+                                        & = (k x_1 + (1 - k) x_2) \log{(k x_1 + (1 - k) x_2)}             \\
+                                        & \phantom{=} + (k y_1 + (1 - k) y_2) \log{(k y_1 + (1 - k) y_2)} \\
+                                        & \le (k x_1 \log{x_1} + (1 - k) x_2 \log{x_2})                   \\
+                                        & \phantom{=} + (k y_1 \log{y_1} + (1 - k) y_2 \log{y_2})         \\
+                                        & = k (x_1 \log{x_1} + y_1 \log{y_1})                             \\
+                                        & \phantom{=} + (1 - k) (x_2 \log{x_2} + y_2 \log{y_2})           \\
+                                        & = k f(x_1, y_1) + (1 - k) f(x_2, y_2)                           \\
+    \text{Q.}                           & \text{E.D.}                                                     \\
+\end{align*}
 
 \end{document}
