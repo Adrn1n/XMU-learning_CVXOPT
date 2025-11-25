@@ -41,12 +41,26 @@ Can't plot.
 \section*{2}
 \addcontentsline{toc}{section}{2}
 \begin{align*}
-    \because \frac{b - x}{b - a} + \frac{x - a}{b - a} & = 1, \ f \text{ is convex}                                                         \\
-    \therefore f(x)                                    & \leq \frac{b - x}{b - a} f(a) + \frac{x - a}{b - a} f(b), \ (\text{by definition}) \\
+    \because a \le x & \le b , \ f \text{ is convex}                                 \\
+    \therefore f(x)  & = f(\frac{b - x}{b - a} a + \frac{x - a}{b - a} b)            \\
+                     & = f(\frac{b - x}{b - a} a + (1 - \frac{b - x}{b - a}) b)      \\
+                     & \le \frac{b - x}{b - a} f(a) + (1 - \frac{b - x}{b - a}) f(b) \\
+                     & = \frac{b - x}{b - a} f(a) + \frac{x - a}{b - a} f(b)         \\
 \end{align*}
 
 \section*{3}
 \addcontentsline{toc}{section}{3}
+\begin{align*}
+    \operatorname{dom}{h}                                 & = \operatorname{dom}{f} \cap \operatorname{dom}{g} \\
+    \because \operatorname{dom}{f}, \operatorname{dom}{g} & \text{ are convex}                                 \\
+    \therefore \operatorname{dom}{h}                      & \text{ is convex}                                  \\
+    \forall{(x < y)}                                      & \in \operatorname{dom}{h}, k \in [0, 1]            \\
+    h(k x + (1 - k) y)                                    & = f(k x + (1 - k) y) + g(k x + (1 - k) y)          \\
+                                                          & \le k f(x) + (1 - k) f(y) + k g(x) + (1 - k) g(y)  \\
+                                                          & = k (f(x) + g(x)) + (1 - k) (f(y) + g(y))          \\
+                                                          & = k h(x) + (1 - k) h(y)                            \\
+    \text{Q.}                                             & \text{E.D.}                                        \\
+\end{align*}
 
 \section*{4}
 \addcontentsline{toc}{section}{4}
