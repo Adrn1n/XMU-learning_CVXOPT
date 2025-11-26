@@ -9,6 +9,7 @@
 
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{mathtools}
 
 \setCJKmainfont[Path="../Assets/Fonts/SourceHan/Serif/",BoldFont={SourceHanSerifSC-Bold.otf},AutoFakeSlant=0.25]{SourceHanSerifSC-Regular.otf}
 \setCJKsansfont[Path="../Assets/Fonts/SourceHan/Sans/",BoldFont={SourceHanSansSC-Bold.otf},AutoFakeSlant=0.25]{SourceHanSansSC-Regular.otf}
@@ -84,5 +85,20 @@ Can't plot.
 
 \section*{5}
 \addcontentsline{toc}{section}{5}
+\begin{align*}
+    {\| y - \theta^T X \|_2}^2           & = (y - \theta^T X)^T (y - \theta^T X)                                                                                                                                           \\
+                                         & = y^T y - y^T \theta^T X - X^T \theta y + X^T \theta \theta^T X                                                                                                                 \\
+                                         & = (X^T \theta)^2 - 2 y \theta^T X + y^2                                                                                                                                         \\
+                                         & = \theta^T (X X^T) \theta - (2 y X^T) \theta + y^2                                                                                                                              \\
+    X X^T                                & \in S_{+}^n                                                                                                                                                                     \\
+    {\| \theta \|_1}                     & = \sum_{i=1}^{n}{|\theta_i|}                                                                                                                                                    \\
+                                         & \ge p^T \theta, \ ((\forall{p}, |p_i| = 1) \land (\exists{p}, p^T \theta = {\| \theta \|_1}))                                                                                   \\
+    \therefore {\| \theta \|_1} \le t    & \iff \forall{p, |p_i| = 1}, p^T \theta \le t                                                                                                                                    \\
+    Q                                    & = (\prescript{}{1}{p},\prescript{}{2}{p},\prescript{}{3}{p},\cdots,\prescript{}{2^n}{p})^T,                                                                                     \\
+    (\forall{i \ne j}                    & \in [1,2^n], (\prescript{}{i}{p} \ne \prescript{}{j}{p}) \land (\forall{k}, |{\prescript{}{i}{p}}_k| = 1))                                                                      \\
+    \therefore \text{Lasso regression: } &                                                                                                                                                                                 \\
+                                         & \operatorname{Max. }{\frac{1}{2} \theta^T (2 X X^T) \theta + (-2 y X)^T \theta + y^2}                                                                                           \\
+    \text{s.t.}                          & \begin{cases}Q \theta \le (t,t,t,\cdots,t)^T, 2 X X^T \in {S_{+}}^n \\ y \in \mathbb{R}, X \in \mathbb{R}^{n+1}, \theta \in \mathbb{R}^{n+1}\end{cases} \\
+\end{align*}
 
 \end{document}
