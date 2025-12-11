@@ -7,6 +7,9 @@
 
 \usepackage{hyperref}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+
 \setCJKmainfont[Path="../Assets/Fonts/SourceHan/Serif/",BoldFont={SourceHanSerifSC-Bold.otf},AutoFakeSlant=0.25]{SourceHanSerifSC-Regular.otf}
 \setCJKsansfont[Path="../Assets/Fonts/SourceHan/Sans/",BoldFont={SourceHanSansSC-Bold.otf},AutoFakeSlant=0.25]{SourceHanSansSC-Regular.otf}
 \setCJKmonofont[Path="../Assets/Fonts/SourceHan/Mono/"]{SourceHanMono.ttc}
@@ -26,8 +29,38 @@
 
 \section*{1}
 \addcontentsline{toc}{section}{1}
+\begin{align*}
+    L         & = x y - \lambda (4 x^2 + y^2 - 8), \ \lambda > 0      \\
+    \nabla{L} & = (y - 8 \lambda x,x - 2 \lambda y,4 x^2 + y^2 - 8)^T \\
+\end{align*}
+\begin{align*}
+    \begin{cases}y - 8 \lambda x & = 0 \\ x - 2 \lambda y & = 0 \\ 4 x^2 + y^2 - 8 & = 0 \\ \end{cases} \\
+    \begin{cases}y & = 8 \lambda x \\ x & = 2 \lambda y \\ 4 x^2 + y^2 & = 8 \\ \end{cases}             \\
+    \begin{cases}y & = 16 \lambda^2 y \\ x & = 16 \lambda^2 x \\ 4 x^2 + y^2 & = 8 \\ \end{cases}       \\
+    \because 4 \times 0^2 + 0^2       & \ne 8                                                           \\
+    \therefore 16 \lambda^2           & = 1                                                             \\
+    \therefore \lambda                & = \frac{1}{4}                                                   \\
+    \therefore y                      & = 8 \times \frac{1}{4} x                                        \\
+                                      & = 2 x                                                           \\
+    \therefore 4 x^2 + (2 x)^2        & = 8                                                             \\
+    8 x^2                             & = 8                                                             \\
+    \therefore x                      & = \pm 1                                                         \\
+    \therefore y                      & = \pm 2                                                         \\
+    f(1,2) = 2, \                     & f(1,-2) = -2                                                    \\
+    f(-1,2) = -2, \                   & f(-1,-2) = 2                                                    \\
+    \therefore \operatorname{Min.}{f} & = f(1,-2) = f(-1,2) = -2                                        \\
+\end{align*}
 
 \section*{2}
 \addcontentsline{toc}{section}{2}
+\begin{align*}
+    L         & = 4 y - 2 z - \lambda_1 (2x - y - z - 1) - \lambda_2 (y - z - 1), \ \lambda_1, \lambda_2 > 0     \\
+    \nabla{L} & = (-2 \lambda_1,4 + \lambda_1 - \lambda_2,-2 + \lambda_1 - \lambda_2,2x - y - z - 1,y - z - 1)^T \\
+\end{align*}
+\begin{align*}
+    \begin{cases}-2 \lambda_1 & = 0 \\ 4 + \lambda_1 - \lambda_2 & = 0 \\ -2 + \lambda_1 - \lambda_2 & = 0 \\ 2x - y - z - 1 & = 0 \\ y - z - 1 & = 0 \\ \end{cases} \\
+    \because \lambda_1 > 0 & \land \lambda_1 = 0                                                                                                                     \\
+    \therefore \text{Can't solve by Lagrange multiplier.}                                                                                                            \\
+\end{align*}
 
 \end{document}
